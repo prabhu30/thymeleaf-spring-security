@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>API Authentication</title>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <h3>Login</h3>
+
+    <form action="#" th:action="@{/authenticateUser}" method="POST">
+
+        <p th:if="${param.error}" class="error">
+            Invalid username/password. Please try again!
+        </p>
+
+        <label>Username : </label>
+        <input type="text" name="username" placeholder="Enter username" /> <br><br>
+        <label>Password : </label>
+        <input type="password" name="password" placeholder="Enter username" /> <br><br>
+        <input type="submit" />
+    </form>
+
+</body>
+</html>

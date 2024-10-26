@@ -10,4 +10,9 @@ public class AppController {
     public String home() {
         return "home";
     }
+
+    @GetMapping("/auth")
+    public String auth() {
+        return "api-auth-new";
+    }
 }
